@@ -1,0 +1,22 @@
+.container-form {
+    width: 100%;
+    max-width: 100;
+    margin: 10px auto 50px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    /* Esto asegura que todo el contenido del formulario esté centrado o al inicio */
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
