@@ -1,11 +1,68 @@
-.contactos {
-  color: black;
-  width: 1170px;
-  height: 368px;
-  margin: 10px 10px 50px;
+.home {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container-form {
+  width: 80%;
+  /* Cambiado para que ocupe más espacio */
+  max-width: 1200px;
+  /* Un límite de tamaño máximo */
+  margin: 30px auto;
+  /* Centrado y con más espacio superior e inferior */
   background-color: #ffffff;
-  box-shadow: 0 3px 13px 1px rgba(0 0 0 /9%);
+  box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);
+  padding: 30px;
+  border-radius: 10px;
+  /* Un poco de borde redondeado */
+}
+
+.d-flex.justify-content-end {
+  margin-bottom: 30px;
+  /* Añadir espacio entre el botón y las tarjetas */
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* Espacio entre las tarjetas */
+}
+
+.contact-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 3px 13px 1px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  text-align: left;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  box-shadow: 0 5px 15px 2px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-actions {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.contact-actions i {
+  margin-left: 15px;
+  cursor: pointer;
+  color: #333;
+}
+
+.contact-actions i:hover {
+  color: #007bff;
 }

@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import "../../styles/Form.css";
-import { Link, useNavigate } from "react-router-dom"; // Ya no necesitas useParams
+import { Link, useNavigate, useParams } from "react-router-dom"; // Ya no necesitas useParams
 
-export const Form = () => {
+export const FormEdit = () => {
   // Definir estados para cada campo del formulario
   const [Name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
   const navigate = useNavigate();
-
+  const { id } = useParams()
   // Función para manejar el envío del formulario
   const handleSubmit = (e) => {
     e.preventDefault(); // Evita el comportamiento predeterminado del formulario (recargar página)
@@ -23,8 +23,8 @@ export const Form = () => {
     };
 
     // Enviar una solicitud POST a la API para crear un nuevo contacto
-    fetch(`https://playground.4geeks.com/contact/agendas/Joanzam/contacts`, {
-      method: "POST", // Usar el método POST
+    fetch(`https://playground.4geeks.com/contact/agendas/Joanzam/contacts/${id}`, {
+      method: "PUT", // Usar el método put
       headers: {
         "Content-Type": "application/json" // Especificar el tipo de contenido
       },
